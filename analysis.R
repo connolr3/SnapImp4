@@ -24,6 +24,9 @@ shapiro.test(data$`PSIAL REGULAR`)
 diff <- data$`PSIAL SNAP` - data$`PSIAL REGULAR`
 shapiro.test(diff)
 
+shapiro.test(data$adj_snap...21)
+diff <- data$`PSIAL SNAP` - data$`PSIAL REGULAR`
+shapiro.test(diff)
 
 
 
