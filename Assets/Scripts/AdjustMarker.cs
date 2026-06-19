@@ -72,8 +72,8 @@ public class AdjustMarker : MonoBehaviour
        
         adjustment = ipdsetter.getIPD();
         Vector3 scale = cylinder.transform.localScale;
-        scale.x = adjustment * 6f;
-        scale.z = adjustment * 6f;
+        scale.x = adjustment * 5f;
+        scale.z = adjustment * 5f;
         cylinder.transform.localScale = scale;
 
         yPosition = SnapPoint.transform.position.y;

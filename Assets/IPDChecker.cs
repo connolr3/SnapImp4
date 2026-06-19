@@ -87,7 +87,7 @@ public class IPDChecker : MonoBehaviour
                     {
                     // Button held for at least 3 seconds
                     Debug.Log("click");
-                    Debug.Log("xz"+DistanceXZ(player.transform.position,agent.transform.position));
+                    Debug.Log("xz DISTANCE (IPD) LOGGED AS:"+DistanceXZ(player.transform.position,agent.transform.position));
                     agent.SetActive(false);
                     }
                     // Reset button hold duration

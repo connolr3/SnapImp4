@@ -72,6 +72,29 @@ public class DataLogger : MonoBehaviour
 
         LogTeleport("teleport", 0f, Marker.position);
     }
+
+    public void LogRegularSNTeleport()
+    {
+        Debug.Log("teleport occuring");
+        if (!recordData || Marker == null)
+            return;
+
+        if (leftRecticle != null && leftRecticle.gameObject.activeInHierarchy)
+        {
+            active = leftRecticle.position;
+        }
+        else if (rightRecticle != null && rightRecticle.gameObject.activeInHierarchy)
+        {
+            active = rightRecticle.position;
+        }
+        else
+        {
+            // No active reticle
+            return;
+        }
+
+        LogTeleport("teleportINZONE", 0f, Marker.position);
+    }
     public void LogSnap()
     {
         Debug.Log("snap occuring");
