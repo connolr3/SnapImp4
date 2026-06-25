@@ -3142,7 +3142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5bfc6f32c56bf046b85faef0f8f57a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IPDSetter
-  IPD: 1.1
+  IPD: 0.99
 --- !u!114 &1664143518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3160,9 +3160,9 @@ MonoBehaviour:
   - {fileID: 1483560885}
   - {fileID: 956899318}
   agents:
-  - {fileID: 1122621042}
-  - {fileID: 672153344}
   - {fileID: 1478541068}
+  - {fileID: 672153344}
+  - {fileID: 1122621042}
   farAway: {fileID: 826614453}
   teleportZone: {fileID: 543784694}
   logger: {fileID: 1664143515}

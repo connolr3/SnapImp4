@@ -1604,7 +1604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 348411863633771602, guid: ac077c52fed6c0d4db9306b95eb12823, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.01
+      value: 0.163
       objectReference: {fileID: 0}
     - target: {fileID: 348411863633771602, guid: ac077c52fed6c0d4db9306b95eb12823, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1612,7 +1612,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 348411863633771602, guid: ac077c52fed6c0d4db9306b95eb12823, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.164
+      value: -0.009
       objectReference: {fileID: 0}
     - target: {fileID: 2648067353794186504, guid: ac077c52fed6c0d4db9306b95eb12823, type: 3}
       propertyPath: originalMaterial
@@ -1689,10 +1689,6 @@ PrefabInstance:
     - target: {fileID: 4823280313159477330, guid: ac077c52fed6c0d4db9306b95eb12823, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7386603585091283688, guid: ac077c52fed6c0d4db9306b95eb12823, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7681813300331930729, guid: ac077c52fed6c0d4db9306b95eb12823, type: 3}
       propertyPath: Player
@@ -3142,7 +3138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5bfc6f32c56bf046b85faef0f8f57a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IPDSetter
-  IPD: 1.1
+  IPD: 0.92
 --- !u!114 &1664143518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3160,9 +3156,9 @@ MonoBehaviour:
   - {fileID: 1483560885}
   - {fileID: 956899318}
   agents:
-  - {fileID: 1122621042}
-  - {fileID: 672153344}
   - {fileID: 1478541068}
+  - {fileID: 672153344}
+  - {fileID: 1122621042}
   farAway: {fileID: 826614453}
   teleportZone: {fileID: 543784694}
   logger: {fileID: 1664143515}
