@@ -1,12 +1,15 @@
 #install.packages("readxl")   # run once
 library(readxl)
-data <- read_excel("C:/Users/rosie/DOWNLOADS/test.xlsx")
 library(tidyverse)
 library(ggpubr)
 library(tidyr)
 library(dplyr)
 library(ggplot2)
 library(rstatix)
+
+
+#data <- read_excel("C:/Users/rosie/DOWNLOADS/test.xlsx")
+data <- read_excel("C:/Users/connolr3/DOWNLOADS/test.xlsx")
 
 
 #COMPARING  THE PSIAL SCORES with teleport type as within subject factor
@@ -19,9 +22,7 @@ data$p_reg <-data$`PSIAL REGULAR`
 data$p_snap <-data$`PSIAL SNAP`
 
 
-long <- data %>%
-  gather(key = "id", value = "score", , t2, t3) %>%
-  convert_as_factor(id, time)
+
 
 #A p-value above 0.05 means the data are CONSISTENT with normal
 shapiro.test(data$`PSIAL SNAP`)#normal  (not significant, cannot reject normality
@@ -44,7 +45,7 @@ data_long <- data %>%
     values_to = "PSIAL"
   ) %>%
   mutate(
-    condition = recode(
+    condition = dplyr::recode(
       condition,
       `PSIAL SNAP` = "SNAP",
       `PSIAL REGULAR` = "REGULAR"
@@ -69,7 +70,9 @@ res.aov
 summary(res.aov)
 
 
-get_anova_table(res.aov, es = "pes")
+get_anova_table(res.aov)
+
+#Eta squared = SSeffect / SStotal
 
 
 anovamodel <- aov(
@@ -78,6 +81,12 @@ anovamodel <- aov(
 )
 
 
+#AVERAGES
+mean(data$`PSIAL SNAP`)
+mean(data$`PSIAL REGULAR`)
+#summary(data)
+sd(data$`PSIAL SNAP`)
+sd(data$`PSIAL REGULAR`)
 
 ## T TEST
 data$`false ipd`<-as.numeric(data$`false ipd`)
@@ -156,5 +165,95 @@ ggplot(data_long, aes(x = condition, y = PSIAL, fill = condition)) +
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#OLD DATA
+old_data<-data[0:10,]
+
+
+old_data_long <- old_data %>%
+  rename(first_block = `first block...8`) %>%
+  pivot_longer(
+    cols = c(`PSIAL SNAP`, `PSIAL REGULAR`),
+    names_to = "condition",
+    values_to = "PSIAL"
+  ) %>%
+  mutate(
+    condition = dplyr::recode(
+      condition,
+      `PSIAL SNAP` = "SNAP",
+      `PSIAL REGULAR` = "REGULAR"
+    ),
+    condition = factor(condition, levels = c("SNAP", "REGULAR")),
+    first_block = factor(first_block)
+  )
+
+
+old_data_long %>%
+  group_by(ID) %>%
+  identify_outliers(PSIAL)
+
+#no outliers
+old.res.aov <- anova_test(data = old_data_long, dv = PSIAL, wid = ID, within = condition,between='first_block')
+
+
+
+
+get_anova_table(old.res.aov)
+old.res.aov
+summary(old.res.aov)
+
+
+
+
+
+
+
+
+
+
+
+
+
+#SPATIAL ABILITU
+
+library(psych )
+corr.test(data$SBSOD, data$adj_reg_av)
+cor(data$SBSOD, data$adj_reg_av)
+
+cor.test(data$SBSOD, data$adj_reg_av)#not significant
+cor.test(data$SBSOD, data$adj_snap_av)#not significant
+
+cor.test(data$SBSOD, data$`PSIAL SNAP`)#not significant
+cor.test(data$SBSOD, data$`PSIAL REGULAR`)#not significant
+
+
+cor.test(data$SBSOD, data$`IPD Preference`)#not significant
+
+cor.test(data$SBSOD, data$`Snap Magnitude...9`)#SIGNIFICANT
+cor.test(data$SBSOD, data$`Snap Magnitude...13`)#not significant
+cor.test(data$SBSOD, data$`Snap Magnitude...11`)#not significant
+
+
+cor.test(data$SBSOD, data$`AVERAGE ADJUSTMENT MAG`)#not significant
 
 
