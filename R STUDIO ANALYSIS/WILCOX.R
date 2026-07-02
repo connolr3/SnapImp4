@@ -44,7 +44,8 @@ test
 #notice the p value is halved from the basic non directional test
 
 
-
+qnorm(0.008149/2)#z statistic
+abs(-2.645833)/sqrt(20)
 
 
 
@@ -87,6 +88,8 @@ differences<-abs(differences)
 r <- Z / sqrt(n)
 r#0.77
 
+-2.673/sqrt(20)#0.593
+-2.673/sqrt(40)#0.42
 
 r <- Z / sqrt(40)
 r#0.54
@@ -111,7 +114,14 @@ wilcox_effsize(
 )#0.59 effect size r 
 
 
+wilcox_effsize(
+  data_long,
+  score ~ condition,
+  paired = TRUE,
+ # alternative = "less"   # SNAP < REGULAR (your hypothesis)
+)#0.59 effect size r 
 
+-2.673/sqrt(40)
 
 
 #------------------------------------------------------------------------------------
