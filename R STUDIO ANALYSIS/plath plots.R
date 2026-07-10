@@ -34,6 +34,9 @@ data <- data %>%
   ungroup()
 
 
+data<-data[!data$IN.ZONE == "no", ]
+
+
 ggplot(data,
        aes(x = x, y = z,
            group = interaction(`Participant.ID`, Teleport))) +
