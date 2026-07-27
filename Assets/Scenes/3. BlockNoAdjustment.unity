@@ -137,7 +137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6466641433616646847, guid: 86c532249aeb12a489aaae9562a6bb08, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.07
       objectReference: {fileID: 0}
     - target: {fileID: 6466641433616646847, guid: 86c532249aeb12a489aaae9562a6bb08, type: 3}
       propertyPath: m_LocalPosition.z
@@ -203,7 +203,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1988487740193981534, guid: 9fdd0f3597e216a448290da4138a3418, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1988487740193981534, guid: 9fdd0f3597e216a448290da4138a3418, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2862,6 +2862,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8327649072775894659, guid: 2232ad4df7763454d93e3d9dc99bc3bb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3353,7 +3357,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 679047865915317972, guid: fc5c037b45f7cb24894a869b0cbb858e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.17
       objectReference: {fileID: 0}
     - target: {fileID: 679047865915317972, guid: fc5c037b45f7cb24894a869b0cbb858e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3687,7 +3691,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8793908306048412606, guid: 746f3ea53dc15cd46a8e5db5f10005f9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.119963974
+      value: -0.22
       objectReference: {fileID: 0}
     - target: {fileID: 8793908306048412606, guid: 746f3ea53dc15cd46a8e5db5f10005f9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3843,6 +3847,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8327649072775894659, guid: 2232ad4df7763454d93e3d9dc99bc3bb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3917,7 +3925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5bfc6f32c56bf046b85faef0f8f57a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IPDSetter
-  IPD: 0.99
+  IPD: 1.76
 --- !u!114 &1664143518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4366,7 +4374,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2848217868763908141, guid: eb0f5956ab6067a4c9daabcd3f178106, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 2848217868763908141, guid: eb0f5956ab6067a4c9daabcd3f178106, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4976,6 +4984,10 @@ PrefabInstance:
     - target: {fileID: 8327649072775894659, guid: 2232ad4df7763454d93e3d9dc99bc3bb, type: 3}
       propertyPath: m_Name
       value: Fence01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8327649072775894659, guid: 2232ad4df7763454d93e3d9dc99bc3bb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
